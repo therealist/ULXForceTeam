@@ -1,0 +1,9 @@
+"AddonInfo"
+{
+        "name"              "ULX ForceSwap"
+        "version"           "1.0"
+        "author_name"       "Shadowfield, The Realist"
+        "author_email"      ""
+        "info"              "Forces the player to switch teams"
+        "override"          "0"
+}
