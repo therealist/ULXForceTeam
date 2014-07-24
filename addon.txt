@@ -1,6 +1,6 @@
 "AddonInfo"
 {
-        "name"              "ULX ForceSwap"
+        "name"              "ULX ForceTeam"
         "version"           "1.0"
         "author_name"       "Shadowfield, The Realist"
         "author_email"      ""
