@@ -1,6 +1,6 @@
 local ulx_team_table = {  
-"Hunter",
-"Prop", 
+"Hunters",
+"Props", 
 "Spectator"
 }
 
@@ -10,9 +10,9 @@ function ulx.forceteam( calling_ply, target_plys, team, should_reset )
 	
 		local teamarg2
 
-		if team == "Hunter" then
+		if team == "Hunters" then
 			teamarg2 = TEAM_HUNTERS
-		elseif team == "Prop" then
+		elseif team == "Props" then
 			teamarg2 = TEAM_PROPS
 		elseif team == "Spectator" then
 			teamarg2 = TEAM_SPECTATOR
