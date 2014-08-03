@@ -22,6 +22,9 @@ function ulx.forceteamspawn( calling_ply, target_plys, team, should_reset )
 			v:Kill()
 			v:SetTeam( teamarg2 )
 			v:Spawn()
+			if teamarg2 == TEAM_PROPS then
+				v:StripWeapons()
+			end
 		end
 
 		ulx.fancyLogAdmin( calling_ply, "#A set the team for #T to #s and spawned", target_plys, team )
