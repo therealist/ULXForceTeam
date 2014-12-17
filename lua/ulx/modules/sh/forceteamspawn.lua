@@ -4,17 +4,18 @@ local ulx_team_table = {
 "Spectator"
 }
 
-function ulx.forceteamspawn( calling_ply, target_plys, team, should_reset )
+function ulx.forceteamspawn( calling_ply, target_plys, getteam, should_reset )
 
 	if not should_reset then
 	
 		local teamarg2
+		local team = string.upper(getteam)
 
-		if team == "Hunters" then
+		if team == "HUNTERS" then
 			teamarg2 = TEAM_HUNTERS
-		elseif team == "Props" then
+		elseif team == "PROPS" then
 			teamarg2 = TEAM_PROPS
-		elseif team == "Spectator" then
+		elseif team == "SPECTATOR" then
 			teamarg2 = TEAM_SPECTATOR
 		end
 		
@@ -44,7 +45,7 @@ function ulx.forceteamspawn( calling_ply, target_plys, team, should_reset )
 end
 local forceteamspawn = ulx.command( "Prop Hunt", "ulx forceteamspawn", ulx.forceteamspawn, "!fts" )
 forceteamspawn:addParam{ type=ULib.cmds.PlayersArg }
-forceteamspawn:addParam{ type=ULib.cmds.StringArg, hint="Select a Team", completes=ulx_team_table, ULib.cmds.restrictToCompletes }
+forceteamspawn:addParam{ type=ULib.cmds.StringArg, hint="Select a Team", completes=ulx_team_table }
 forceteamspawn:addParam{ type=ULib.cmds.BoolArg, invisible=true }
 forceteamspawn:defaultAccess( ULib.ACCESS_ADMIN )
 forceteamspawn:help( "Set a player's team." )
